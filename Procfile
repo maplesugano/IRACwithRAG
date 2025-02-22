@@ -1,1 +1,1 @@
-web: cd chatbot/ && npm install && npm start
+web: npm start
