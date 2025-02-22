@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px; /* Increase font size */
+}
+
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: white;
+  position: relative;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: calc(100% - 150px);
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+/* USER MESSAGE: Right-aligned */
+.message.user {
+  background: #007bff;
+  color: white;
+  text-align: left;
+  border-radius: 15px;
+  padding: 8px 12px;
+  width: 600px;
+  margin: 5px 10px;
+  margin-left: 39vw;
+}
+
+/* BOT MESSAGE: Center-aligned */
+.message.bot {
+  background: #f1f1f1;
+  color: black;
+  align-self: center; /* Moves the entire message container to the center */
+  text-align: center;
+  border-radius: 15px;
+  padding: 8px 12px;
+  max-width: 90%;
+  margin: 5px auto;
+}
+
+/* FIXED POSITIONING OF INPUT BOX */
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: white;
+}
+
+/* Multi-line input (textarea) */
+textarea {
+  flex-grow: 1;
+  padding: 8px;
+  padding-top: 20px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  min-height: 150px;
+  width: 200;
+  padding-right: 40px;
+  resize: none; /* Prevent manual resizing */
+  overflow-y: auto;
+  outline: none;
+}
+
+.send-button {
+  position: absolute;
+  right: 120px;
+  bottom: 40px;
+  /* top: 5px; */
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button:hover {
+  background: #0056b3;
+}
