@@ -18,16 +18,16 @@
 .messages {
   flex-grow: 1;
   overflow-y: auto;
-  max-height: calc(100% - 150px);
+  max-height: calc(100% - 180px);
   padding-right: 80px;
   padding-left: 80px;
+  text-align: left;
 }
 
 /* USER MESSAGE: Right-aligned */
 .message.user {
   background: #007bff;
   color: white;
-  text-align: left;
   border-radius: 15px;
   padding: 8px 12px;
   width: 600px;
@@ -40,18 +40,20 @@
   background: #f1f1f1;
   color: black;
   align-self: center; /* Moves the entire message container to the center */
-  text-align: center;
   border-radius: 15px;
   padding: 8px 12px;
   max-width: 90%;
   margin: 5px auto;
+  margin-left: 20px;
+  padding-left: 30px;
 }
 
 /* FIXED POSITIONING OF INPUT BOX */
 .input-container {
   display: flex;
   align-items: center;
-  padding: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
   position: absolute;
   bottom: 0;
   left: 0;
