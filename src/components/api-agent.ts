@@ -53,8 +53,8 @@ const requests = {
 };
 
 const Search = {
-  ask_graph: (query: string) => requests.get('ask/', new URLSearchParams({ query })),
-  ask_vector: (query: string) => requests.get('ask_vector/', new URLSearchParams({ query })),
+  ask_graph: (query: string) => requests.get('ask', new URLSearchParams({ query })),
+  ask_vector: (query: string) => requests.get('ask_vector', new URLSearchParams({ query })),
 };
 
 const Status = {
