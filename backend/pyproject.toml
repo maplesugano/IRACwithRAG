@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["maplesugano <ks2222@ic.ac.uk>"]
+readme = "README.md"
+packages = [{ include = "src" }]  # <-- Ensure this matches your package folder
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+fastapi = "^0.115.11"
+uvicorn = "^0.34.0"
+pydantic-settings = "^2.8.1"
+pandas = "^2.2.3"
+pinecone = "^5.4.0"
+pinecone-client = "2.2.2"
+langchain = "^0.3.20"
+langchain-community = "^0.3.19"
+semantic-kernel = "<1.22.1"
+langchain-openai = "^0.3.7"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
