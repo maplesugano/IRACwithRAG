@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 
 // Configure the base URL for the Axios instance
-axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'https://graphrag-backend-e89c0efac5f7.herokuapp.com/';
+axios.defaults.baseURL = 'https://irac-backend-dd689875432c.herokuapp.com/';
 axios.defaults.withCredentials = true;
 
 const responseBody = (response: AxiosResponse) => response.data;
@@ -61,10 +61,7 @@ const Status = {
 };
 
 const Switch = {
-  graph: () => requests.get('set_graph'),
-  vector: () => requests.get('set_vector'),
   reset: () => requests.get('refresh_history'),
-  add_location: (coords: string) => requests.get('add_location', new URLSearchParams({ coords })),
 };
 
 const agent = {

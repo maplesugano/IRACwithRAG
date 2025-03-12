@@ -8,7 +8,6 @@ import React from 'react';
 const APISearchPane: React.FC<APISearchProps> = ({
     handleApiSearch,
     serverUp,
-    isDarkMode,
     messages,
     nodecolors,
     setMessages,

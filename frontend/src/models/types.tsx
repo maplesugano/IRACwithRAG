@@ -35,7 +35,6 @@ interface APISearchProps {
         query: string
     ) => Promise<APICallResult | null>;
     serverUp: boolean;
-    isDarkMode: boolean;
     messages: ChatMessage[];
     nodecolors: { [key: string]: string };
     setMessages: React.Dispatch<React.SetStateAction<ChatMessage[]>>;

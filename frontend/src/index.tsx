@@ -126,7 +126,6 @@ const App: React.FC = () => {
             <APISearchPane
                 handleApiSearch={handleApiSearch}
                 serverUp={serverUp}
-                isDarkMode={true}
                 messages={messages}
                 nodecolors={nodecolor_scheme}
                 setMessages={setMessages}
