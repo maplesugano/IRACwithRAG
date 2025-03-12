@@ -1,6 +1,6 @@
 from semantic_kernel.functions import kernel_function
-from langchain_community.vectorstores import Pinecone as PineconeStore
-from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_pinecone import PineconeVectorStore
+from langchain_openai import OpenAIEmbeddings
 from pinecone import Pinecone
 
 class VectorRAGPlugin:
@@ -22,12 +22,12 @@ class VectorRAGPlugin:
 
         self.embeddings = OpenAIEmbeddings(openai_api_key=settings.OPENAI_API_KEY)
 
-        self.docsearch = PineconeStore(
+        self.docsearch = PineconeVectorStore(
             index=self.index,
             embedding=self.embeddings,
             text_key="text"
         )
-
+    
     @kernel_function(
             name="vector_search", 
             description="Retrieves a law-related document based on a query")
